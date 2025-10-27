@@ -31,7 +31,11 @@ export const DiceBoard = () => {
       <div className="diceBoard">
         <div className="diceContainer">
           {diceValues.map((value, index) => (
-            <Dice key={index} value={value} turnCount={turnCount} />
+            <Dice
+              key={index.toString() + "-" + turnCount.toString()}
+              value={value}
+              turnCount={turnCount}
+            />
           ))}
         </div>
 
